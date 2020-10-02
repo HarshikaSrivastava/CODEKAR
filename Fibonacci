@@ -1,0 +1,19 @@
+def fib(n) :
+    if n <= 1 :
+        return n
+    else :
+        return ( fib(n-1) + fib(n-2) )
+   
+def fibfun(n,m) :
+    sum = 0
+    for i in range(n,m+1) :
+        sum = sum + fib(i)
+    print(sum)
+    return
+       
+t = int(input(""))
+while t > 0 :
+    i = input("")
+    i = i.split(" ")
+    fibfun(int(i[0]),int(i[1]))
+    t= t-1 
