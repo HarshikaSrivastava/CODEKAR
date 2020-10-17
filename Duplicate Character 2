@@ -1,0 +1,12 @@
+def removeDuplicate(str):
+        count=0
+        t=""
+        for i in str:
+            if(i in t):
+                count=count+1
+            else:
+                t=t+i
+        return count
+str=input()
+q=removeDuplicate(str) 
+print(q)
