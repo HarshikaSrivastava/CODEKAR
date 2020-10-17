@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+     int c3=0,c6=0,c9=0,count=0;
+     int i,r=0;
+     int a,b,N;
+    scanf("%d%d",&a,&b);
+    
+    
+    for(i=a;i<b;i++)
+    {
+        N=i;
+         while (N!=0) 
+         { 
+  
+        r = N % 10; 
+  
+      
+             if(r==3)
+                 c3++;
+             if(r==6)
+                 c6++;
+             if(r==9)
+                 c9++;
+      
+  
+        N = N / 10; 
+        } 
+      
+        if(c3==c6 && c6==c9 && c3!=0 && c6!=0 && c9!=0)
+            count++;
+        c3=0;
+        c6=0;
+        c9=0;
+    }
+    printf("%d",count);
+    return 0;
+}
